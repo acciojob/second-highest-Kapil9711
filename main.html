@@ -9,7 +9,20 @@
 <body>	
 	<script>
 		function secondHighest(arr) {
-			//Write your code here
+			let arr = [1,2,3];
+        let newSet = new Set(arr);
+
+    if(!arr.length || arr.length === 1 || newSet.size === 1){
+    return('-Infinity');
+    } 
+
+   let max = Math.max(...arr);
+   let secondMax = -Infinity;
+  arr.forEach((ele)=>{
+    if(ele < max && ele > secondMax) secondMax = ele;
+     })
+    return secondMax;
+			
 			
 		}
 
